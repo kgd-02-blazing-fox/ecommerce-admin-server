@@ -2,11 +2,8 @@
 const {
   Model
 } = require('sequelize');
-
-const { hashPassword } = require('../helpers/hashPassword')
-
 module.exports = (sequelize, DataTypes) => {
-  class User extends Model {
+  class Admin extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -16,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   };
-  User.init({
+  Admin.init({
     email: {
       type: DataTypes.STRING,
       validate: {
@@ -35,7 +32,6 @@ module.exports = (sequelize, DataTypes) => {
         }
       }
     },
-    role: DataTypes.STRING
   }, {
     hooks: {
       beforeCreate(user) {
@@ -43,7 +39,7 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
     sequelize,
-    modelName: 'User',
+    modelName: 'Admin',
   });
-  return User;
+  return Admin;
 };

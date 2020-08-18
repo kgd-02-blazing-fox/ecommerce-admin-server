@@ -1,4 +1,5 @@
 const { Product } = require('../models')
+const e = require('express')
 
 class ProductController {
   static async fetchProduct(req, res, next) {
@@ -20,9 +21,10 @@ class ProductController {
       })
       res.status(201).json(data)
     } catch (err) {
+      let message = err.message
       next({
         status: 400,
-        message: err.message
+        message
       })
     }
   }
@@ -30,14 +32,62 @@ class ProductController {
   static async deleteProduct(req, res, next) {
     try {
       const data = await Product.destroy({
-        where: { id: req.productId }
+        where: { id: req.params.productId }
       })
-      res.status(200).json(data)
+      if (!data) {
+        throw err
+      } else {
+        res.json({
+          status: 200,
+          message: "Product deleted"
+        })
+      }
     } catch (err) {
-      next(err)
+      next({
+        status: 404,
+        message: "Product not Found"
+      })
     }
   }
 
+  static async getSpesificProduct(req, res, next) {
+    try {
+      const data = await Product.findOne({
+        where: { id: req.params.productId }
+      })
+      if (!data) {
+        throw err
+      } else {
+        res.status(200).json(data)
+      }
+    } catch (err) {
+      next({
+        status: 404,
+        message: "Product not Found"
+      })
+    }
+  }
+
+  static async updateSpesificProduct(req, res, next) {
+    try {
+      const data = await Product.update({
+        name: req.body.name,
+        image_url: req.body.image_url,
+        price: req.body.price,
+        stock: req.body.stock
+      },
+      {
+        where: { id: req.params.productId },
+        returning: true
+      })
+      res.status(201).json(data[1][0])
+    } catch (err) {
+      next({
+        status: 400,
+        message: err.message
+      })
+    }
+  }
 }
 
 module.exports = ProductController

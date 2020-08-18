@@ -1,12 +1,11 @@
 function errorHandler(err, req, res, next) {
-  console.log(err, '<<< ERROR HANDLER RESPONSE');
+  // console.log(err, '<<< ERROR HANDLER RESPONSE');
 
-  let statusCode, message
-  if (err.status === 400) {
+  let statusCode = err.status
+  let message = err.message
+  
+  if(err.name === 'JsonWebTokenError'){
     statusCode = 400
-    message = err.message
-  } else {
-    statusCode = 500
     message = err.message
   }
 

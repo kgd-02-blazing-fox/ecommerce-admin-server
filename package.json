@@ -4,7 +4,8 @@
   "description": "repository server admin ecommerce",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test npx jest --detectOpenHandles"
+    "dev": "NODE_ENV=development nodemon app.js",
+    "test": "NODE_ENV=test sequelize db:seed:all && npx jest --verbose --runInBand --detectOpenHandles --forceExit"
   },
   "repository": {
     "type": "git",

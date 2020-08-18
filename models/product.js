@@ -17,18 +17,40 @@ module.exports = (sequelize, DataTypes) => {
     name: {
       type: DataTypes.STRING,
       validate: {
-        notEmpty:{
+        notEmpty: {
           args: true,
           msg: "Name is required"
+        },
+        isStringType(product) {
+          if (typeof product !== 'string') {
+            throw new Error("Only string input type allowed")
+          }
         }
       }
     },
-    image_url: DataTypes.STRING,
+    image_url: {
+      type: DataTypes.STRING,
+      validate: {
+        notEmpty: {
+          args: true,
+          msg: "Image is required"
+        },
+        isStringType(url) {
+          if (typeof url !== 'string') {
+            throw new Error("Only string input type allowed")
+          }
+        }
+      }
+    },
     price: {
       type: DataTypes.INTEGER,
       validate: {
-        isNotMinus(price){
-          if(price <= 0){
+        notEmpty: {
+          args: true,
+          msg: "Price is required"
+        },
+        isNotMinus(price) {
+          if (price <= 0) {
             throw new Error("Price cannot be minus value")
           }
         }
@@ -37,8 +59,12 @@ module.exports = (sequelize, DataTypes) => {
     stock: {
       type: DataTypes.INTEGER,
       validate: {
-        isNotMinus(price){
-          if(price <= 0){
+        notEmpty: {
+          args: true,
+          msg: "Stock is required"
+        },
+        isNotMinus(price) {
+          if (price <= 0) {
             throw new Error("Stock cannot be minus value")
           }
         }
