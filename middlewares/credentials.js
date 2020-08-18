@@ -2,8 +2,7 @@ const jwt = require('jsonwebtoken')
 const { Admin, Product } = require('../models')
 
 function authenticate(req, res, next) {
-  // console.log("AUTHENTICATING!");
-  const payload = jwt.verify(req.headers.access_token, 'rahasia')
+  const payload = jwt.verify(req.headers.access_token, process.env.JWT_SECRET)
 
   if (!payload) {
     next ({
@@ -36,7 +35,6 @@ function authenticate(req, res, next) {
 
 
 function authorize(req, res, next) {
-  // console.log("AUTHORIZING");
   Admin.findOne({
     where: {
       email: req.adminEmail

@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken')
 
 function userToken(payload) {
-  const token = jwt.sign(payload, 'rahasia')
+  const token = jwt.sign(payload, process.env.JWT_SECRET)
   if(token){
     return token
   } else {
