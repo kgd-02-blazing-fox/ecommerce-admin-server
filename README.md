@@ -1,2 +1,4 @@
 # ecommerce-admin-server
-repository server admin ecommerce
+
+### to start testing
+    `npm run test`
