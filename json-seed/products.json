@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Book",
+    "image_url": "https://zdnet2.cbsistatic.com/hub/i/r/2018/01/11/f77aa21c-793e-4eec-96d8-bc9c299bc350/resize/370xauto/321d59cf64c1163a2d9132c8ecaa7eae/confident-coding-main.png",
+    "price": 50000,
+    "stock": 20
+  },
+  {
+    "name": "Laptop",
+    "image_url": "https://cdn.idntimes.com/content-images/post/20191226/0-53b3f04ff9cc14bb1142e42bdcac9c6c_600x400.jpg",
+    "price": 10500000,
+    "stock": 5
+  },
+  {
+    "name": "Meja Set",
+    "image_url": "https://s.blanja.com/picspace/198/275654/690.690_25a25119a4954e8d9c84fed93d07f18b.jpg",
+    "price": 500000,
+    "stock": 10
+  }
+]
