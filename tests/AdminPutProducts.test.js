@@ -82,7 +82,7 @@ describe("Admin - putProducts",()=>{
             stock: 120,
         })
         .end((err,res)=>{
-            expect(res.status).toBe(201)
+            expect(res.status).toBe(200)
             expect(res.body).toBeInstanceOf(Object)
             expect(res.body).toHaveProperty("name","UltraSoy")
             expect(res.body).toHaveProperty("image_url","ultrasoy.png")

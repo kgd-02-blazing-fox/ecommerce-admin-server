@@ -76,7 +76,7 @@ describe("Admin - delProducts",()=>{
         .delete(`/products/${id}`)
         .set({"access_token":access_token})
         .end((err,res)=>{
-            expect(res.status).toBe(201)
+            expect(res.status).toBe(200)
             expect(res.body).toBeInstanceOf(Object)
             expect(res.body).toHaveProperty("name","Crepes")
             expect(res.body).toHaveProperty("image_url","crepes.png")

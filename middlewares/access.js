@@ -20,7 +20,7 @@ class Access {
             next(error)
         }
     }
-    static async andminAuthorize(req,res,next) {
+    static async adminAuthorize(req,res,next) {
         try {
             if (req.access_role === "admin") {
                 next()

@@ -37,7 +37,7 @@ class ProductControllers {
                 price,
                 stock
             },{where:{id:req.params.id},returning:true})
-            res.status(201).json(result[1][0])
+            res.status(200).json(result[1][0])
         } catch (error) {
             next(error)
         }
@@ -46,7 +46,7 @@ class ProductControllers {
         try {
             let result = await Product.findByPk(req.params.id)
             let destroyed = await Product.destroy({where:{id:req.params.id}})
-            res.status(201).json(result)
+            res.status(200).json(result)
         } catch (error) {
             next(error)
         }
