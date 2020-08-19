@@ -1,4 +1,4 @@
-# kanban-server
+# E-Commerce-admin-server
 
 Providing a E-commerce services which can be added, manipulated, and deleted later by admin, and customers
 
