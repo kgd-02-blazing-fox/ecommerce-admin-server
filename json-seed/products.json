@@ -1,20 +1,38 @@
 [
   {
-    "name": "Book",
-    "image_url": "https://zdnet2.cbsistatic.com/hub/i/r/2018/01/11/f77aa21c-793e-4eec-96d8-bc9c299bc350/resize/370xauto/321d59cf64c1163a2d9132c8ecaa7eae/confident-coding-main.png",
+    "name": "novel cerita",
+    "image_url": "https://www.berdikaribook.red/image/c/data/Basa-Basi/KAUMNOVELSETYANINGSIHweb-500x500.jpg",
+    "price": 35000,
+    "stock": 20
+  },
+  {
+    "name": "novel thriller",
+    "image_url": "https://res.cloudinary.com/berdikari-book/image/upload/c/data/Solusi-Buku-Grup/noveltirah-500x500.jpg",
+    "price": 35000,
+    "stock": 15
+  },
+  {
+    "name": "novel romansa",
+    "image_url": "https://res.cloudinary.com/berdikari-book/image/upload/c/data/Haru/absurdnovel-500x500.jpg",
     "price": 50000,
     "stock": 20
   },
   {
-    "name": "Laptop",
-    "image_url": "https://cdn.idntimes.com/content-images/post/20191226/0-53b3f04ff9cc14bb1142e42bdcac9c6c_600x400.jpg",
-    "price": 10500000,
+    "name": "laptop gaming",
+    "image_url": "https://media.dinomarket.com/docs/imgTD/2019-07/ROGG531GVI7R6G1T__080719160715_ll.jpg.jpg",
+    "price": 15000000,
     "stock": 5
   },
   {
-    "name": "Meja Set",
-    "image_url": "https://s.blanja.com/picspace/198/275654/690.690_25a25119a4954e8d9c84fed93d07f18b.jpg",
-    "price": 500000,
-    "stock": 10
+    "name": "laptop performa",
+    "image_url": "https://cf.shopee.co.id/file/c863a4fa07bb67257265902ba6c61b40",
+    "price": 12000000,
+    "stock": 5
+  },
+  {
+    "name": "desktop pc",
+    "image_url": "https://lh3.googleusercontent.com/proxy/QU90PymHXEUMvUyduj9H-J0wf5XlfX5VUl9jCa_yMNoPuQDTL8pVDd3krH7crYBnbdzmjQ3ES2HyUuQOqtnfjSctoReh91SrgpIx_QHF7Q",
+    "price": 10000000,
+    "stock": 5
   }
 ]
