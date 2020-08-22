@@ -5,6 +5,7 @@
 List of available endpoints:
 ​
 - `POST /admin`
+- `POST /user`
 
 - `GET /products`
 - `POST /products`
@@ -52,6 +53,40 @@ Response:
 }
 ```
 ​
+### POST /user
+
+Request:
+
+- data:
+
+```json
+{
+  "email": "string",
+  "password": "string"
+}
+```
+
+Response:
+
+- status: 200
+- body:
+  ​
+
+```json
+{
+  "access_token": "string"
+}
+```
+
+- status: 400
+- body:
+  ​
+
+```json
+{
+  "message": "email / password invalid!"
+}
+```
 
 ### GET /products
 
