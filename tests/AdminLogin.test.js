@@ -8,9 +8,9 @@ describe("Admin", ()=>{
 
     beforeAll(done=>{
         User.create({
-            name: 'John Doe',
-            email: 'johndoe@ecommerce.com',
-            password: '123456',
+            name: 'admin',
+            email: 'admin@mail.com',
+            password: '1234',
             role: 'admin',
             createdAt: new Date(),
             updatedAt: new Date(),
@@ -31,8 +31,8 @@ describe("Admin", ()=>{
         request(app)
         .post("/login")
         .send({
-            email: "johndoe@ecommerce.com",
-            password: "123456"
+            email: "admin@mail.com",
+            password: "1234"
         })
         .end((err,res)=>{
             if (err) done(err)
@@ -48,7 +48,7 @@ describe("Admin", ()=>{
         .post("/login")
         .send({
             email: "johndairy@ecommerce.com",
-            password: "123456"
+            password: "1234"
         })
         .end((err,res)=>{
             if (err) done(err)
@@ -63,7 +63,7 @@ describe("Admin", ()=>{
         request(app)
         .post("/login")
         .send({
-            email: "johndoe@ecommerce.com",
+            email: "admin@mail.com",
             password: "111111"
         })
         .end((err,res)=>{
@@ -80,7 +80,7 @@ describe("Admin", ()=>{
         .post("/login")
         .send({
             email:"",
-            password:"123456"
+            password:"1234"
         })
         .end((err,res)=>{
             if (err) done(err)
@@ -95,7 +95,7 @@ describe("Admin", ()=>{
         request(app)
         .post("/login")
         .send({
-            email:"johndoe@ecommerce.com",
+            email:"admin@mail.com",
             password:""
         })
         .end((err,res)=>{

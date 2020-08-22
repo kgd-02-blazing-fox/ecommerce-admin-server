@@ -19,7 +19,7 @@ class UserControllers {
                         name:user.name,
                         email:user.email,
                         role:user.role
-                    },'123456')})
+                    },process.env.JWT_SECRET)})
                 } else {
                     throw new Error ("Wrong email/password combination")
                 }

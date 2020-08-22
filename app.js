@@ -1,7 +1,8 @@
 "use strict"
 
+if (process.env.NODE_ENV === "development" || process.env.NODE_ENV === "test") require("dotenv").config()
+
 const express = require("express")
-const port = 3000
 const app = express()
 const cors = require("cors")
 const {errorHandling} = require("./middlewares/errorhandling.js")
@@ -14,7 +15,5 @@ app.use(cors())
 
 app.use("/",index)
 app.use(errorHandling)
-
-// app.listen(port, ()=>{console.log(`E-commerce running at port:${port}`)})
 
 module.exports = app

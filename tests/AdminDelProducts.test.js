@@ -15,6 +15,7 @@ describe("Admin - delProducts",()=>{
                 image_url: 'milk.png',
                 price: 50000,
                 stock: 20,
+                category:"food",
                 createdAt: new Date(),
                 updatedAt: new Date(),
             },{
@@ -22,6 +23,7 @@ describe("Admin - delProducts",()=>{
                 image_url: 'oil.png',
                 price: 20000,
                 stock: 50,
+                category:"food",
                 createdAt: new Date(),
                 updatedAt: new Date(),
             },{
@@ -29,14 +31,15 @@ describe("Admin - delProducts",()=>{
                 image_url: 'crepes.png',
                 price: 35000,
                 stock: 10,
+                category:"food",
                 createdAt: new Date(),
                 updatedAt: new Date(),
             }])
         .then(res=>{
             return User.create({
-            name: 'John Doe',
-            email: 'johndoe@ecommerce.com',
-            password: '123456',
+            name: 'admin',
+            email: 'admin@mail.com',
+            password: '1234',
             role: 'admin',
             createdAt: new Date(),
             updatedAt: new Date(),
@@ -50,10 +53,10 @@ describe("Admin - delProducts",()=>{
         })
         .then(res=>{
             access_token = jwt.sign({
-                name:'John Doe',
-                email: 'johndoe@ecommerce.com',
+                name:'admin',
+                email: 'admin@mail.com',
                 role:'admin'
-            },"123456")
+            },process.env.JWT_SECRET || "123456")
             done()
         })
         .catch(err=>console.log(err))
@@ -82,6 +85,7 @@ describe("Admin - delProducts",()=>{
             expect(res.body).toHaveProperty("image_url","crepes.png")
             expect(res.body).toHaveProperty("price",35000)
             expect(res.body).toHaveProperty("stock",10)
+            expect(res.body).toHaveProperty("category","food")
             done()
         })
     })
@@ -94,7 +98,7 @@ describe("Admin - delProducts",()=>{
                 name:'John',
                 email: 'johndairy@ecommerce.com',
                 role:'customer'
-           },"123456")
+           },process.env.JWT_SECRET || "123456")
         })
         .end((err,res)=>{
             expect(res.status).toBe(401)

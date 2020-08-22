@@ -4,11 +4,6 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Product extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
     static associate(models) {
       // define association here
     }
@@ -44,6 +39,14 @@ module.exports = (sequelize, DataTypes) => {
       validate:{
         negativeValue(value) {
           if (value<0) throw new Error("Please fill in the right stock format")
+        }
+      }
+    },
+    category: {type:DataTypes.STRING,
+      validate:{
+        notEmpty:{
+          args:true,
+          msg:"Please fill in the category"
         }
       }
     }

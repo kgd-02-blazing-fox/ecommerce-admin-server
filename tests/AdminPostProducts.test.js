@@ -14,6 +14,7 @@ describe("Admin - postProducts",()=>{
                 image_url: 'milk.png',
                 price: 50000,
                 stock: 20,
+                category: "food",
                 createdAt: new Date(),
                 updatedAt: new Date(),
             },{
@@ -21,6 +22,7 @@ describe("Admin - postProducts",()=>{
                 image_url: 'oil.png',
                 price: 20000,
                 stock: 50,
+                category: "food",
                 createdAt: new Date(),
                 updatedAt: new Date(),
             },{
@@ -28,14 +30,15 @@ describe("Admin - postProducts",()=>{
                 image_url: 'crepes.png',
                 price: 35000,
                 stock: 10,
+                category: "food",
                 createdAt: new Date(),
                 updatedAt: new Date(),
             }])
         .then(res=>{
             return User.create({
-            name: 'John Doe',
-            email: 'johndoe@ecommerce.com',
-            password: '123456',
+            name: 'admin',
+            email: 'admin@mail.com',
+            password: '1234',
             role: 'admin',
             createdAt: new Date(),
             updatedAt: new Date(),
@@ -43,10 +46,10 @@ describe("Admin - postProducts",()=>{
         })
         .then(res=>{
             access_token = jwt.sign({
-                name:'John Doe',
-                email: 'johndoe@ecommerce.com',
+                name:'admin',
+                email: 'admin@mail.com',
                 role:'admin'
-            },"123456")
+            },process.env.JWT_SECRET || "123456")
             done()
         })
         .catch(err=>console.log(err))
@@ -73,6 +76,7 @@ describe("Admin - postProducts",()=>{
             image_url: 'ultramilk.png',
             price: 2000,
             stock: 10,
+            category: "food",
         })
         .end((err,res)=>{
             expect(res.status).toBe(201)
@@ -81,6 +85,7 @@ describe("Admin - postProducts",()=>{
             expect(res.body).toHaveProperty("image_url","ultramilk.png")
             expect(res.body).toHaveProperty("price",2000)
             expect(res.body).toHaveProperty("stock",10)
+            expect(res.body).toHaveProperty("category", "food")
             done()
         })
     })
@@ -94,6 +99,7 @@ describe("Admin - postProducts",()=>{
             image_url: 'ultramilk.png',
             price: 2000,
             stock: 10,
+            category: "food"
         })
         .end((err,res)=>{
             expect(res.status).toBe(400)
@@ -112,6 +118,7 @@ describe("Admin - postProducts",()=>{
             image_url: 'milk.png',
             price: 50000,
             stock: 20,
+            category: "food"
         })
         .end((err,res)=>{
             expect(res.status).toBe(400)
@@ -126,10 +133,11 @@ describe("Admin - postProducts",()=>{
         .post("/products")
         .set({"access_token":access_token})
         .send({
-            name: 'UltraSusu',
+            name: 'UltraMilk',
             image_url: '',
             price: 2000,
             stock: 10,
+            category: "food",
         })
         .end((err,res)=>{
             expect(res.status).toBe(400)
@@ -144,10 +152,11 @@ describe("Admin - postProducts",()=>{
         .post("/products")
         .set({"access_token":access_token})
         .send({
-            name: 'UltraSusu',
+            name: 'UltraMilk',
             image_url: 'milk.png',
             price: 0,
             stock: 10,
+            category: "food",
         })
         .end((err,res)=>{
             expect(res.status).toBe(400)
@@ -162,10 +171,11 @@ describe("Admin - postProducts",()=>{
         .post("/products")
         .set({"access_token":access_token})
         .send({
-            name: 'UltraSusu',
+            name: 'UltraMilk',
             image_url: 'milk.png',
             price: -2000,
             stock: 10,
+            category: "food"
         })
         .end((err,res)=>{
             expect(res.status).toBe(400)
@@ -180,15 +190,35 @@ describe("Admin - postProducts",()=>{
         .post("/products")
         .set({"access_token":access_token})
         .send({
-            name: 'UltraSusu',
+            name: 'UltraMilk',
             image_url: 'milk.png',
             price: 2000,
             stock: -10,
+            category: "food",
         })
         .end((err,res)=>{
             expect(res.status).toBe(400)
             expect(res.body).toBeInstanceOf(Object)
             expect(res.body).toHaveProperty("message", "Please fill in the right stock format")
+            done()
+        })
+    })
+
+    test("admin postProducts failed - Empty category",done=>{
+        request(app)
+        .post("/products")
+        .set({"access_token":access_token})
+        .send({
+            name: 'UltraMilk',
+            image_url: 'milk.png',
+            price: 2000,
+            stock: 10,
+            category: "",
+        })
+        .end((err,res)=>{
+            expect(res.status).toBe(400)
+            expect(res.body).toBeInstanceOf(Object)
+            expect(res.body).toHaveProperty("message", "Please fill in the category")
             done()
         })
     })
@@ -201,13 +231,14 @@ describe("Admin - postProducts",()=>{
                 name:'John',
                 email: 'johndairy@ecommerce.com',
                 role:'customer'
-           },"123456")
+           },process.env.JWT_SECRET || "123456")
         })
         .send({
             name: 'UltraMilk',
             image_url: 'ultramilk.png',
             price: 2000,
             stock: 10,
+            category: "food"
         })
         .end((err,res)=>{
             expect(res.status).toBe(401)
@@ -226,6 +257,7 @@ describe("Admin - postProducts",()=>{
             image_url: 'ultramilk.png',
             price: 2000,
             stock: 10,
+            category: "food"
         })
         .end((err,res)=>{
             expect(res.status).toBe(500)

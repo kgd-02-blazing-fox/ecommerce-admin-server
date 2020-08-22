@@ -15,6 +15,7 @@ describe("Admin - putProducts",()=>{
                 image_url: 'milk.png',
                 price: 50000,
                 stock: 20,
+                category: "food",
                 createdAt: new Date(),
                 updatedAt: new Date(),
             },{
@@ -22,6 +23,7 @@ describe("Admin - putProducts",()=>{
                 image_url: 'oil.png',
                 price: 20000,
                 stock: 50,
+                category: "food",
                 createdAt: new Date(),
                 updatedAt: new Date(),
             },{
@@ -29,14 +31,15 @@ describe("Admin - putProducts",()=>{
                 image_url: 'crepes.png',
                 price: 35000,
                 stock: 10,
+                category: "food",
                 createdAt: new Date(),
                 updatedAt: new Date(),
             }])
         .then(res=>{
             return User.create({
-            name: 'John Doe',
-            email: 'johndoe@ecommerce.com',
-            password: '123456',
+            name: 'admin',
+            email: 'admin@mail.com',
+            password: '1234',
             role: 'admin',
             createdAt: new Date(),
             updatedAt: new Date(),
@@ -49,11 +52,11 @@ describe("Admin - putProducts",()=>{
             })
         })
         .then(res=>{
-            access_token = jwt.sign({
-                name:'John Doe',
-                email: 'johndoe@ecommerce.com',
+          access_token = jwt.sign({
+                name:'admin',
+                email: 'admin@mail.com',
                 role:'admin'
-            },"123456")
+            },process.env.JWT_SECRET || "123456")
             done()
         })
         .catch(err=>console.log(err))
@@ -80,6 +83,7 @@ describe("Admin - putProducts",()=>{
             image_url: 'ultrasoy.png',
             price: 5000,
             stock: 120,
+            category: "food"
         })
         .end((err,res)=>{
             expect(res.status).toBe(200)
@@ -88,6 +92,7 @@ describe("Admin - putProducts",()=>{
             expect(res.body).toHaveProperty("image_url","ultrasoy.png")
             expect(res.body).toHaveProperty("price",5000)
             expect(res.body).toHaveProperty("stock",120)
+            expect(res.body).toHaveProperty("category","food")
             done()
         })
     })
@@ -101,6 +106,7 @@ describe("Admin - putProducts",()=>{
             image_url: 'ultrasoy.png',
             price: 5000,
             stock: 120,
+            category: "food"
         })
         .end((err,res)=>{
             expect(res.status).toBe(400)
@@ -119,6 +125,7 @@ describe("Admin - putProducts",()=>{
             image_url: 'milk.png',
             price: 50000,
             stock: 20,
+            category: "food"
         })
         .end((err,res)=>{
             expect(res.status).toBe(400)
@@ -137,6 +144,7 @@ describe("Admin - putProducts",()=>{
             image_url: '',
             price: 5000,
             stock: 120,
+            category: "food"
         })
         .end((err,res)=>{
             expect(res.status).toBe(400)
@@ -155,6 +163,7 @@ describe("Admin - putProducts",()=>{
             image_url: 'ultrasoy.png',
             price: 0,
             stock: 120,
+            category: "food"
         })
         .end((err,res)=>{
             expect(res.status).toBe(400)
@@ -173,6 +182,7 @@ describe("Admin - putProducts",()=>{
             image_url: 'ultrasoy.png',
             price: -5000,
             stock: 120,
+            category: "food"
         })
         .end((err,res)=>{
             expect(res.status).toBe(400)
@@ -191,11 +201,31 @@ describe("Admin - putProducts",()=>{
             image_url: 'ultrasoy.png',
             price: 5000,
             stock: -120,
+            category: "food"
         })
         .end((err,res)=>{
             expect(res.status).toBe(400)
             expect(res.body).toBeInstanceOf(Object)
             expect(res.body).toHaveProperty("message", "Please fill in the right stock format")
+            done()
+        })
+    })
+    
+    test("admin postProducts failed - Empty category",done=>{
+        request(app)
+        .put(`/products/${id}`)
+        .set({"access_token":access_token})
+        .send({
+            name: 'UltraSoy',
+            image_url: 'ultrasoy.png',
+            price: 5000,
+            stock: 120,
+            category: ""
+        })
+        .end((err,res)=>{
+            expect(res.status).toBe(400)
+            expect(res.body).toBeInstanceOf(Object)
+            expect(res.body).toHaveProperty("message", "Please fill in the category")
             done()
         })
     })
@@ -210,13 +240,14 @@ describe("Admin - putProducts",()=>{
                 name:'John',
                 email: 'johndairy@ecommerce.com',
                 role:'customer'
-           },"123456")
+           },process.env.JWT_SECRET || "123456")
         })
         .send({
             name: 'UltraSoy',
             image_url: 'ultrasoy.png',
             price: 5000,
             stock: 120,
+            category: "food"
         })
         .end((err,res)=>{
             expect(res.status).toBe(401)
@@ -235,6 +266,7 @@ describe("Admin - putProducts",()=>{
             image_url: 'ultrasoy.png',
             price: 5000,
             stock: 120,
+            category: "food"
         })
         .end((err,res)=>{
             expect(res.status).toBe(500)

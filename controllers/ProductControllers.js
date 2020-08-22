@@ -16,12 +16,13 @@ class ProductControllers {
     }
     static async postProducts(req,res,next) {
         try {
-            let {name,image_url,price,stock} = req.body
+            let {name,image_url,price,stock,category} = req.body
             let result = await Product.create({
                 name,
                 image_url,
                 price,
-                stock
+                stock,
+                category
             })
             res.status(201).json(result)
         } catch (error) {
@@ -30,12 +31,13 @@ class ProductControllers {
     }
     static async putProducts(req,res,next) {
         try {
-            let {name,image_url,price,stock} = req.body
+            let {name,image_url,price,stock,category} = req.body
             let result = await Product.update({
                 name,
                 image_url,
                 price,
-                stock
+                stock,
+                category
             },{where:{id:req.params.id},returning:true})
             res.status(200).json(result[1][0])
         } catch (error) {
