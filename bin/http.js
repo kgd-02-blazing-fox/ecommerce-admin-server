@@ -7,7 +7,15 @@ io.on('connect', function(socket){
   console.log('CLIENT CONNECTED');
 
   socket.on('newproduct', function(){
-    socket.broadcast.emit('CHANGE')
+    socket.broadcast.emit('NewAddProducts')
+  })
+
+  socket.on('newEditproduct', function(payload){
+    socket.broadcast.emit('NewEditProduct', payload)
+  })
+
+  socket.on('deleteingProduct', function(){
+    socket.broadcast.emit('NewDeleteingProduct')
   })
 })
 
