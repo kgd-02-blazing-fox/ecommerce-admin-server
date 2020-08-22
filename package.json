@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node bin/http.js",
     "dev": "NODE_ENV=development nodemon bin/http.js",
-    "test": "NODE_ENV=test sequelize db:seed:all && npx jest --verbose --runInBand --detectOpenHandles --forceExit",
+    "test": "NODE_ENV=test sequelize db:seed:all && npx jest --verbose --runInBand --detectOpenHandles --forceExit"
   },
   "repository": {
     "type": "git",
