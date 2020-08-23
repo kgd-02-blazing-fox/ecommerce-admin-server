@@ -7,7 +7,7 @@ Providing a E-commerce services which can be added, manipulated, and deleted lat
 
 * URL:
 
-        /admin/login
+        /login
 
 * Method:
 
@@ -44,7 +44,7 @@ Providing a E-commerce services which can be added, manipulated, and deleted lat
 
 * URL:
 
-        /tasks
+        /products
 
 * Method:
 
@@ -69,6 +69,7 @@ Providing a E-commerce services which can be added, manipulated, and deleted lat
             "image_url": 'milk.png',
             "price": 50000,
             "stock": 20,
+            "category": 'food'
             "createdAt": "2020-08-13T20:16:26.631Z",
             "updatedAt": "2020-08-14T07:11:13.028Z"
         },
@@ -78,6 +79,7 @@ Providing a E-commerce services which can be added, manipulated, and deleted lat
             "image_url": 'oil.png',
             "price": 20000,
             "stock": 50,
+            "category": 'food'
             "createdAt": "2020-08-13T20:16:55.090Z",
             "updatedAt": "2020-08-14T08:44:56.066Z"
         },
@@ -87,6 +89,7 @@ Providing a E-commerce services which can be added, manipulated, and deleted lat
             "image_url": 'crepes.png',
             "price": 35000,
             "stock": 10,
+            "category": 'food'
             "createdAt": "2020-08-14T03:53:10.592Z",
             "updatedAt": "2020-08-14T08:44:57.547Z"
         }
@@ -122,6 +125,7 @@ Providing a E-commerce services which can be added, manipulated, and deleted lat
         image_url=[string]
         price=[integer]
         stock=[integer]
+        category=[string]
 
         Required Headers:
         access_token=[string]
@@ -135,6 +139,7 @@ Providing a E-commerce services which can be added, manipulated, and deleted lat
         "image_url": 'bananas.png',
         "price": 50000,
         "stock": 20,
+        "category": 'food'
         "createdAt": "2020-08-19T03:53:10.592Z",
         "updatedAt": "2020-08-19T08:44:57.547Z"
         }
@@ -174,6 +179,7 @@ Providing a E-commerce services which can be added, manipulated, and deleted lat
         image_url=[string]
         price=[integer]
         stock=[integer]
+        category=[string]
 
         Required Headers:
         access_token=[string]
@@ -187,6 +193,7 @@ Providing a E-commerce services which can be added, manipulated, and deleted lat
         "image_url": 'mananas.png',
         "price": 500,
         "stock": 2000,
+        "category": 'food'
         "createdAt": "2020-08-19T03:53:10.592Z",
         "updatedAt": "2020-08-19T10:44:57.547Z"
         }
@@ -233,6 +240,7 @@ Providing a E-commerce services which can be added, manipulated, and deleted lat
         "image_url": 'mananas.png',
         "price": 500,
         "stock": 2000,
+        "category": 'food'
         "createdAt": "2020-08-19T03:53:10.592Z",
         "updatedAt": "2020-08-19T10:44:57.547Z"
         }
