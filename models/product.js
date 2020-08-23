@@ -10,6 +10,7 @@ module.exports = (sequelize, DataTypes) => {
   };
   Product.init({
     name: {type:DataTypes.STRING,
+      unique:true,
       validate:{
         notEmpty:{
           args:true,

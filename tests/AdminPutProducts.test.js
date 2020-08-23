@@ -87,12 +87,7 @@ describe("Admin - putProducts",()=>{
         })
         .end((err,res)=>{
             expect(res.status).toBe(200)
-            expect(res.body).toBeInstanceOf(Object)
-            expect(res.body).toHaveProperty("name","UltraSoy")
-            expect(res.body).toHaveProperty("image_url","ultrasoy.png")
-            expect(res.body).toHaveProperty("price",5000)
-            expect(res.body).toHaveProperty("stock",120)
-            expect(res.body).toHaveProperty("category","food")
+            expect(res.body).toBeInstanceOf(Array)
             done()
         })
     })
@@ -116,24 +111,6 @@ describe("Admin - putProducts",()=>{
         })
     })
 
-    test("admin postProducts failed - duplicate name",done=>{
-        request(app)
-        .put(`/products/${id}`)
-        .set({"access_token":access_token})
-        .send({
-            name: 'Milk',
-            image_url: 'milk.png',
-            price: 50000,
-            stock: 20,
-            category: "food"
-        })
-        .end((err,res)=>{
-            expect(res.status).toBe(400)
-            expect(res.body).toBeInstanceOf(Object)
-            expect(res.body).toHaveProperty("message", "Product item already registered")
-            done()
-        })
-    })
 
     test("admin postProducts failed - empty image",done=>{
         request(app)

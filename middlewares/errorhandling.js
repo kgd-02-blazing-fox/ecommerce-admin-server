@@ -1,7 +1,6 @@
 "use strict"
 
 function errorHandling(err,req,res,next) {
-    // console.log(err)
     if (err.name !== "Error") {
         if (err.name === "SequelizeValidationError" || err.name === "SequelizeUniqueConstraintError") {
             if (err.errors[0].message === "name must be unique") {

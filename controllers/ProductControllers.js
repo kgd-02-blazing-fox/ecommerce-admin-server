@@ -32,15 +32,16 @@ class ProductControllers {
     static async putProducts(req,res,next) {
         try {
             let {name,image_url,price,stock,category} = req.body
-            let result = await Product.update({
+            let result = await Product.upsert({
                 name,
                 image_url,
                 price,
                 stock,
-                category
-            },{where:{id:req.params.id},returning:true})
-            res.status(200).json(result[1][0])
+                category,
+            },{where:{id:req.params.id}})
+            res.status(200).json(result)
         } catch (error) {
+          console.log(error)
             next(error)
         }
     }
