@@ -1,46 +1,45 @@
 const jwt = require('jsonwebtoken')
-const { Admin } = require('../models')
+const { User } = require('../models')
 
-function authenticate(req, res, next) {
+async function authenticate(req, res, next) {
   const payload = jwt.verify(req.headers.access_token, process.env.JWT_SECRET)
-
   if (!payload) {
     next({
       status: 401,
       message: "Unathorized action!"
     })
   } else {
-    Admin.findOne({
-      where: { email: payload.email }
-    })
-      .then(admin => {
-        if (admin) {
-          req.adminEmail = admin.email
-          next()
-        } else {
-          next({
-            status: 401,
-            message: "Unathorized action!"
-          })
-        }
+    try {
+      const user = await User.findOne({
+        where: { email: payload.email }
       })
-      .catch(err => {
+      if (user) {
+        req.userId = user.id
+        req.userEmail = user.email
+        next()
+      } else {
         next({
           status: 401,
           message: "Unathorized action!"
         })
+      }
+    } catch (err) {
+      next({
+        status: 401,
+        message: "Unathorized action!"
       })
+    }
   }
 }
 
 
 function authorize(req, res, next) {
-  Admin.findOne({
+  User.findOne({
     where: {
-      email: req.adminEmail
+      email: req.userEmail
     }
   })
-    .then(admin => {
+    .then(user => {
       next()
     })
     .catch(err => {

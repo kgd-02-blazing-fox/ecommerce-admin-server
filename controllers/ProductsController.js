@@ -88,6 +88,24 @@ class ProductController {
       })
     }
   }
+
+  static async SpesificProductStockChange(req, res, next){
+    try {
+      const data = await Product.decrement(
+        'stock',
+      {
+        by: 1,
+        where: { id: req.params.productId },
+        returning: true
+      })
+      res.status(200).json(data)
+    } catch (err) {
+      next({
+        status: 400,
+        message: err.message
+      })
+    }
+  }
 }
 
 module.exports = ProductController
