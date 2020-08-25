@@ -37,7 +37,7 @@ class ProductControllers {
                 image_url,
                 price,
                 stock,
-                category,
+                category
             },{where:{id:req.params.id}})
             res.status(200).json(result)
         } catch (error) {
