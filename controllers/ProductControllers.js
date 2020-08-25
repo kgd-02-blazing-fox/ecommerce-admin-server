@@ -32,7 +32,7 @@ class ProductControllers {
     static async putProducts(req,res,next) {
         try {
             let {name,image_url,price,stock,category} = req.body
-            let result = await Product.upsert({
+            let result = await Product.update({
                 name,
                 image_url,
                 price,
