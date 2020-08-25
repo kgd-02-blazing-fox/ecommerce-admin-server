@@ -9,7 +9,7 @@ const {User, Task} = require('../models')
 
 router.get('/', (req, res) => {
     res.status(200).json({
-        msg: 'server connected'
+        msg: 'server ecommerce connected'
     })
 });
 router.use('/user', userRouter);
