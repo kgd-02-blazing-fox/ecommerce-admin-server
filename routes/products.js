@@ -12,8 +12,8 @@ router.delete('/:productId', authenticate, authorize, ProductController.deletePr
 router.get('/:productId', authenticate, authorize, ProductController.getSpesificProduct)
 router.put('/:productId', authenticate, authorize, ProductController.updateSpesificProduct)
 
-// this is from user
+// this is from and for user
 router.put('/stock/:productId', ProductController.SpesificProductStockChange)
-
+router.get('/user/:productId', ProductController.getSpesificProduct)
 
 module.exports = router
