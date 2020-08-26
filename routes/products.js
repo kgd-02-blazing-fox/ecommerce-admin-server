@@ -13,7 +13,7 @@ router.get('/:productId', authenticate, authorize, ProductController.getSpesific
 router.put('/:productId', authenticate, authorize, ProductController.updateSpesificProduct)
 
 // this is from and for user
-router.put('/stock/:productId', ProductController.SpesificProductStockChange)
+router.post('/stock', ProductController.SpesificProductStockChange)
 router.get('/user/:productId', ProductController.getSpesificProduct)
 
 module.exports = router

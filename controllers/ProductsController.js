@@ -76,10 +76,10 @@ class ProductController {
         price: req.body.price,
         stock: req.body.stock
       },
-      {
-        where: { id: req.params.productId },
-        returning: true
-      })
+        {
+          where: { id: req.params.productId },
+          returning: true
+        })
       res.status(201).json(data[1][0])
     } catch (err) {
       next({
@@ -89,16 +89,19 @@ class ProductController {
     }
   }
 
-  static async SpesificProductStockChange(req, res, next){
+  static async SpesificProductStockChange(req, res, next) {
+    const data = req.body.payload
     try {
-      const data = await Product.decrement(
-        'stock',
-      {
-        by: 1,
-        where: { id: req.params.productId },
-        returning: true
+      const updated = await data.forEach(el => {
+        Product.decrement(
+          'stock',
+          {
+            by: el.ammount,
+            where: { id: el.id },
+            returning: true
+          })
       })
-      res.status(200).json(data)
+      res.status(200).json(updated)
     } catch (err) {
       next({
         status: 400,

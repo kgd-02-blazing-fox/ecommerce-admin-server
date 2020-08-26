@@ -19,13 +19,30 @@ class CartController {
 
   static async createCart(req, res, next) {
     try {
-      const items = await Cart.create({
-        UserId: req.userId,
-        ProductId: req.body.ProductId,
-        ammount: req.body.ammount
+      const add = Number(req.body.ammount)
+      const found = await Cart.findOne({
+        where: { ProductId: req.body.ProductId }
       })
-      res.status(201).json(items)
+      if (found) {
+        // console.log(found);
+        Cart.increment('ammount',
+          {
+            by: +add,
+            where: { ProductId: req.body.ProductId }
+          })
+        .then(data=>{
+          res.status(200).json(data)
+        })
+      } else {
+        const items = await Cart.create({
+          UserId: req.userId,
+          ProductId: req.body.ProductId,
+          ammount: req.body.ammount
+        })
+        res.status(201).json(items)
+      }
     } catch (err) {
+      console.log(err);
       next(err)
     }
   }
@@ -35,7 +52,7 @@ class CartController {
       const addedItem = await Cart.increment(
         { ammount: +1 },
         {
-          where: { id: req.params.cartId }
+          where: { ProductId: req.params.productId }
         })
       res.status(200).json(addedItem)
     } catch (err) {
@@ -49,7 +66,7 @@ class CartController {
       const addedItem = await Cart.decrement(
         { ammount: 1 },
         {
-          where: { id: req.params.cartId }
+          where: { ProductId: req.params.productId }
         })
       res.status(200).json(addedItem)
     } catch (err) {
@@ -58,10 +75,10 @@ class CartController {
     }
   }
 
-  static async destroyItem(req, res, next){
+  static async destroyItem(req, res, next) {
     try {
       const data = await Cart.destroy({
-        where: { id: req.params.itemId }
+        where: { ProductId: req.params.itemId }
       })
       if (!data) {
         throw err
@@ -79,7 +96,7 @@ class CartController {
     }
   }
 
-  static async destroyCart(req, res, next){
+  static async destroyCart(req, res, next) {
     try {
       const data = await Cart.destroy({
         where: { UserId: req.userId }

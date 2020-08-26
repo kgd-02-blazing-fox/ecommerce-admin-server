@@ -17,8 +17,8 @@ router.get('/cart', authenticate, authorize, CartController.getCart)
 router.post('/cart', authenticate, authorize, CartController.createCart )
 
 //updating the ammount of items in the cart
-router.put('/cart/:cartId/increment', authenticate, authorize, CartController.addItemAmmount)
-router.put('/cart/:cartId/decrement', authenticate, authorize, CartController.reduceItemAmmount)
+router.put('/cart/:productId/increment', authenticate, authorize, CartController.addItemAmmount)
+router.put('/cart/:productId/decrement', authenticate, authorize, CartController.reduceItemAmmount)
 
 //delete item from cart
 router.delete('/cart/:itemId', authenticate, authorize, CartController.destroyItem)
