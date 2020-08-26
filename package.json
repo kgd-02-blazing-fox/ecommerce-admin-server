@@ -1,0 +1,36 @@
+{
+  "name": "ecommerce-admin-server",
+  "version": "1.0.0",
+  "description": "repository server admin ecommerce",
+  "main": "app.js",
+  "scripts": {
+    "dev": "(SET NODE_ENV=development) & nodemon bin/http.js",
+    "test": "(SET NODE_ENV=test) & npx jest --verbose --coverage --detectOpenHandles --runInBand --forceExit",
+    "start": "node bin/http.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laurentiusedrick/ecommerce-admin-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laurentiusedrick/ecommerce-admin-server/issues"
+  },
+  "homepage": "https://github.com/laurentiusedrick/ecommerce-admin-server#readme",
+  "devDependencies": {
+    "jest": "^26.4.0",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.3.0",
+    "sequelize": "^6.3.4",
+    "socket.io": "^2.3.0"
+  }
+}

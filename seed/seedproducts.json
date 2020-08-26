@@ -1,0 +1,450 @@
+[
+  {
+    "name": "Ultra milk full cream",
+    "image_url": "https://i.pinimg.com/originals/4f/9d/02/4f9d02f6492961bc1491bea10f53990a.jpg",
+    "price": 5000,
+    "stock": 30,
+    "category": "Food"
+  },
+  {
+    "name": "Ultra milk chocolate",
+    "image_url": "https://waroengindo.com.sg/contents/products/ultracoklat250.jpg",
+    "price": 5000,
+    "stock": 27,
+    "category": "Food"
+  },
+  {
+    "name": "Greenfield full cream",
+    "image_url": "https://cdn.monotaro.id/media/catalog/product/cache/6/image/b5fa40980320eb406ba395dece54e4a8/S/0/S003809754-1.jpg",
+    "price": 5000,
+    "stock": 54,
+    "category": "Food"
+  },
+  {
+    "name": "Koko Crunch sachet",
+    "image_url": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/9/16/5514124/5514124_6c20c820-0528-4a2f-80c5-c15854f6007c_700_700.jpg",
+    "price": 14000,
+    "stock": 32,
+    "category": "Food"
+  },
+  {
+    "name": "Honey Stars",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSvUFi4uBAgpZlgYYDoYJnMsPSOFHvsAv9pAQ&usqp=CAU",
+    "price": 26000,
+    "stock": 14,
+    "category": "Food"
+  },
+  {
+    "name": "Trix large size",
+    "image_url": "https://images.heb.com/is/image/HEBGrocery/001478660",
+    "price": 52000,
+    "stock": 3,
+    "category": "Food"
+  },
+  {
+    "name": "Indomie mi goreng",
+    "image_url": "https://statik.tempo.co/data/2018/01/29/id_680428/680428_720.jpg",
+    "price": 3000,
+    "stock": 1924,
+    "category": "Food"
+  },
+  {
+    "name": "Indomie kari ayam",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSKtNP80CSomcVVb4Lx-b8mupiISaidFJ78Mw&usqp=CAU",
+    "price": 3000,
+    "stock": 2032,
+    "category": "Food"
+  },
+  {
+    "name": "Indomie soto lamongan",
+    "image_url": "https://p.ipricegroup.com/ae2cbb0b44e4fc52db882db73371769f24b3a0d4_0.jpg",
+    "price": 3000,
+    "stock": 2032,
+    "category": "Food"
+  },
+  {
+    "name": "Mie sedap kari spesial",
+    "image_url": "https://miro.medium.com/max/960/0*XKzg-BbVXNpBCJBj.jpg",
+    "price": 3500,
+    "stock": 1254,
+    "category": "Food"
+  },
+  {
+    "name": "Pepaya",
+    "image_url": "https://c.ndtvimg.com/2019-06/qlo3s8ko_papaya-seeds_625x300_06_June_19.jpg",
+    "price": 24500,
+    "stock": 6,
+    "category": "Food"
+  },
+  {
+    "name": "Jeruk",
+    "image_url": "https://cdn.britannica.com/24/174524-050-A851D3F2/Oranges.jpg",
+    "price": 8200,
+    "stock": 72,
+    "category": "Food"
+  },
+  {
+    "name": "Apel",
+    "image_url": "https://media.istockphoto.com/photos/red-apple-picture-id186843005?k=6&m=186843005&s=612x612&w=0&h=BmOanZ9Cq3NQBcfNzu3C7kIAWW7wLxTbOvyFtmeJDpU=",
+    "price": 3800,
+    "stock": 37,
+    "category": "Food"
+  },
+  {
+    "name": "Durian",
+    "image_url": "https://akcdn.detik.net.id/visual/2020/04/28/aa2e2ade-343e-4bd8-be52-ef62226261bc_169.jpeg?w=650",
+    "price": 72000,
+    "stock": 16,
+    "category": "Food"
+  },
+  {
+    "name": "Mangga",
+    "image_url": "https://images.livemint.com/rf/Image-621x414/LiveMint/Period2/2018/05/05/Photos/Processed/mangoes1-k22F--621x414@LiveMint.jpg",
+    "price": 18000,
+    "stock": 38,
+    "category": "Food"
+  },
+  {
+    "name": "Tomat",
+    "image_url": "https://www.lovemysalad.com/sites/default/files/styles/image_530x397/public/800px-bright_red_tomato_and_cross_section02.jpg?itok=_2-MsqIa",
+    "price": 4000,
+    "stock": 127,
+    "category": "Food"
+  },
+  {
+    "name": "Bayam",
+    "image_url": "https://akg.fkm.ui.ac.id/wp-content/uploads/2014/06/bayam1.jpg",
+    "price": 2900,
+    "stock": 49,
+    "category": "Food"
+  },
+  {
+    "name": "Sawi",
+    "image_url": "https://nusantaranews.co/assets/uploads/2017/09/Sayur-Sawi.-Foto-via-csr-Nusantaranews.jpg",
+    "price": 3100,
+    "stock": 37,
+    "category": "Food"
+  },
+  {
+    "name": "Cabe Rawit",
+    "image_url": "https://dtq2i388ejbah.cloudfront.net/images/imagedensity/cabe_rawit_merah_mobile_product_4x.jpg",
+    "price": 700,
+    "stock": 3200,
+    "category": "Food"
+  },
+  {
+    "name": "Cheetos jagung bakar",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSJBRM5ww2pNthxqW688ghQgbrEM9y1DdVLCw&usqp=CAU",
+    "price": 4200,
+    "stock": 53,
+    "category": "Food"
+  },
+  {
+    "name": "Chiki Cheese balls",
+    "image_url": "https://qph.fs.quoracdn.net/main-qimg-745cdcb903b7b4358eca6eb728778cae",
+    "price": 3900,
+    "stock": 56,
+    "category": "Food"
+  },
+  {
+    "name": "Jetz Choco Splash",
+    "image_url": "https://d3psifl1ixugq1.cloudfront.net/NPW_39062_pic1_B420_831164241.jpg",
+    "price": 3900,
+    "stock": 56,
+    "category": "Food"
+  },
+  {
+    "name": "Daging sapi sirloin",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQqtPk7zfeeq2PmXsw-W_JvopymgMhZ_XI79Q&usqp=CAU",
+    "price": 72000,
+    "stock": 17,
+    "category": "Food"
+  },
+  {
+    "name": "Daging sapi tenderloin",
+    "image_url": "https://embed.widencdn.net/img/beef/pia9ewfgx6/800x600px/Tenderloin%20Filet.psd?keep=c&u=7fueml",
+    "price": 84000,
+    "stock": 31,
+    "category": "Food"
+  },
+  {
+    "name": "Paha ayam",
+    "image_url": "https://image.freepik.com/free-photo/raw-chicken-thigh-isolated-white-background_176402-135.jpg",
+    "price": 9200,
+    "stock": 76,
+    "category": "Food"
+  },
+  {
+    "name": "Dada ayam",
+    "image_url": "https://blog.thermoworks.com/wp-content/uploads/2017/04/iStock_45233784_LARGE-300x183.jpg",
+    "price": 11000,
+    "stock": 62,
+    "category": "Food"
+  },
+  {
+    "name": "Telur kampung",
+    "image_url": "https://asset-a.grid.id//crop/0x0:0x0/360x240/photo/2020/06/06/3173404228.jpg",
+    "price": 11000,
+    "stock": 22,
+    "category": "Food"
+  },
+  {
+    "name": "Telur broiler",
+    "image_url": "https://2.bp.blogspot.com/-QwKgfJXsf_4/VddBMzYz3BI/AAAAAAAADNI/aNbsU1xXIfA/s640/Harga%2BTelur%2BAyam%2BRas.JPG",
+    "price": 11000,
+    "stock": 47,
+    "category": "Food"
+  },
+  {
+    "name": "Kraft keju cheddar",
+    "image_url": "https://bundakraft.com/api/files/styles/resep_photo_gallery/public/new/0c6b3174d8dea21d40dda58fb76d3880.png",
+    "price": 24000,
+    "stock": 38,
+    "category": "Food"
+  },
+  {
+    "name": "Kraft keju Quickmelt",
+    "image_url": "https://mycandythemes.files.wordpress.com/2013/02/kejukraftquicmelt.jpg",
+    "price": 35000,
+    "stock": 24,
+    "category": "Food"
+  },
+  {
+    "name": "Torabika kopi Creamy latte",
+    "image_url": "https://asset.telunjuk.co.id/ri/180/200/-model-terbaru-tora-bika-creamy-latte-isi-10pcs-gula-terpisah-torabika_49be32ad22c610d9677df1d4a9367735.jpg",
+    "price": 42000,
+    "stock": 11,
+    "category": "Food"
+  },
+  {
+    "name": "Kapal Api kopi hitam",
+    "image_url": "https://seroyamart.com/blog/wp-content/uploads/2014/09/Kopi-Kapal-Api-500x315.jpg",
+    "price": 9000,
+    "stock": 94,
+    "category": "Food"
+  },
+  {
+    "name": "Sabuk pria Montblanc",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/service/id/images/mens-fashion/price/7665/7665610/MF_Ekslusif_Gesper_Ikat_Pinggang_Ban_Pinggang_Sabuk_Kulit_Cowok_Pria_Montblanc_1.jpg",
+    "price": 175000,
+    "stock": 41,
+    "category": "Clothes"
+  },
+  {
+    "name": "Sabuk pria Ormano",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/service/id/images/mens-fashion/price/10152/10152708/MF_Ormano_Ikat_Pinggang_Kanvas_Pria_Jeep_Camouflage_Casual_110cm_Men_Fashion_Accessories_Canvas_Belt_Gesper_Sabuk_Celana_Ban_Pinggang_Kanvas_Metal_Buckle_Outdoor_Sekolah_Kerja_Formal_Rapi_Keren_Cool_Pelengkap_Busana_Nyaman_Awet_Tahan_Lama_s5016_1.jpg",
+    "price": 42900,
+    "stock": 94,
+    "category": "Clothes"
+  },
+  {
+    "name": "Sabuk wanita Silver",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/service/id/images/womens-fashion/price/9214/9214999/MF_Ikat_pinggang_wanita_ring_belt_gesper_sabuk_ring_silver_1.jpg",
+    "price": 35800,
+    "stock": 27,
+    "category": "Clothes"
+  },
+  {
+    "name": "Maxi Dress lengan panjang",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/service/id/images/womens-fashion/price/11049/11049633/MF_caca_dress_l_carita_maxy_l_sabrina_dress_terbaru_terlaris_1.jpg",
+    "price": 97000,
+    "stock": 62,
+    "category": "Clothes"
+  },
+  {
+    "name": "Batik Dress Empat Sekawan",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/service/id/images/womens-fashion/price/11289/11289964/MF_BISA_COD_READY_JUMBO_XXL_Batik_Empat_Sekawan_Baju_Batik_Tunik_Baju_Batik_Wanita_Modern_Atasan_Pekalongan_dress_dres_terlaris_longdress_termurah_gamis_daster_arab_murah_gratis_ongkir_busui_sukaini_TUN101_1.jpg",
+    "price": 120000,
+    "stock": 21,
+    "category": "Clothes"
+  },
+  {
+    "name": "Celana renang boxer pria",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/service/id/images/mens-fashion/price/10285/10285154/MF_Bayar_Di_Tempat_Celana_Renang_Boxer_Pria_dengan_Dasi_Depan_DESMIIT_Motif_SL00189_1.jpg",
+    "price": 89000,
+    "stock": 95,
+    "category": "Clothes"
+  },
+  {
+    "name": "Celana renang celana pria",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/service/id/images/mens-fashion/price/11063/11063545/MF_Moderntime_2019_Cepat_Kering_Batang_Pria_Celana_Renang_Celana_Pendek_Fitness_Celana_Dalam_Boxer_Baju_Renang_Ketat_Baju_Mandi_Pakaian_Renang_Ukuran_Besar_M_2XL_1.jpg",
+    "price": 120000,
+    "stock": 38,
+    "category": "Clothes"
+  },
+  {
+    "name": "Baju renang camo pria",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/service/id/images/mens-fashion/price/9199/9199238/MF_Hot_Sale_Pria_Pria_Berenang_Kemeja_Menyelam_Camo_K_Berlaku_Surf_Kemeja_Pantai_Berenang_UV_Perlindungan_Suit_1.jpg",
+    "price": 218000,
+    "stock": 17,
+    "category": "Clothes"
+  },
+  {
+    "name": "Kaos Eiger geometri unisex",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/service/id/images/mens-fashion/price/11022/11022450/MF_kaos_eiger_sketch_geometri_910004899_1.jpg",
+    "price": 132000,
+    "stock": 22,
+    "category": "Clothes"
+  },
+  {
+    "name": "Kaos Vanessa Tumblr wanita",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/service/id/images/womens-fashion/price/6999/6999640/MF_Vanessa_Tumblr_Tee_T_Shirt_POSE_T_shirt_Wanita_Kaos_Cewek_Tumblr_Tee_Cewek_Kaos_Wanita_Murah_Baju_Wanita_Murah_Kaos_Lengan_Pendek_Kaos_Oblong_Kaos_Tulisan_1.jpg",
+    "price": 132000,
+    "stock": 22,
+    "category": "Clothes"
+  },
+  {
+    "name": "Hotclassic v2 sepatu korea",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/service/id/images/womens-fashion/price/11237/11237738/MF_SEPATU_korea_HOTCLASSIC_V2_tosca_sepatu_korea_hijau_sepatu_korea_warna_putih_sepatu_wanita_hctclasslo_NB022_1.png",
+    "price": 222000,
+    "stock": 18,
+    "category": "Clothes"
+  },
+  {
+    "name": "Nike sepatu Air Max 97",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/service/id/images/mens-fashion/price/11103/11103381/MF_Sepatu_Model_Nike_Air_Max_97_Casual_Warna_Silver_untuk_Jogging_1.jpg",
+    "price": 1979000,
+    "stock": 5,
+    "category": "Clothes"
+  },
+  {
+    "name": "Nike sepatu Air Max Zoom Flyknit",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/service/id/images/mens-fashion/price/11023/11023560/MF_SEPATU_NIKE_PRIA_BEST_SELLER_AIRMAX_ZOOM_FLYKNIT_2_SALUR_HITAM_MERAH_SNEAKERS_OLAHRAGA_PRIA_RUNNINGG_1.jpg",
+    "price": 1979000,
+    "stock": 5,
+    "category": "Clothes"
+  },
+  {
+    "name": "Fossil jam tangan wanita",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/service/id/images/womens-fashion/price/11133/11133270/MF_JAM_FOSSIL_TERLARIS_TERMURAH_Jam_Tangan_Fashion_Wanita_DT_095_Bonus_Box_Baterai_Cadangan_1.jpg",
+    "price": 329000,
+    "stock": 24,
+    "category": "Clothes"
+  },
+  {
+    "name": "Alexander Christie jam tangan pria",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/service/id/images/mens-fashion/price/10845/10845790/MF_Jam_Tangan_Pria_Alexandre_Christie_Alexander_Christie_Pria_Alexandre_Christie_Alexander_Christie_Pria_Original_Alexandre_Christie_Pria_jam_tangan_casual_pria_jamtangan_pria_formal_ALEXANDRE_CHRISTIE_AC_6270_SILVER_BROWN_GARANSI_RESMI_1TAHUN_1.jpg",
+    "price": 825000,
+    "stock": 18,
+    "category": "Clothes"
+  },
+  {
+    "name": "Realme C15",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/global/images/product/mobilephones/Realme_C15_ph/Realme_C15_ph_S_1.jpg",
+    "price": 1470000,
+    "stock": 18,
+    "category": "Electronic"
+  },
+  {
+    "name": "Realme 5 Pro",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/global/images/product/mobilephones/realme_5_pro/realme_5_pro_S_1.jpg",
+    "price": 2105000,
+    "stock": 3,
+    "category": "Electronic"
+  },
+  {
+    "name": "Iphone X",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/global/images/product/mobilephones/Apple_iPhone_X_/Apple_iPhone_X__S_1.jpg",
+    "price": 10820000,
+    "stock": 36,
+    "category": "Electronic"
+  },
+  {
+    "name": "Iphone 8",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/global/images/product/mobilephones/Apple_iPhone_8_/Apple_iPhone_8__S_1.jpg",
+    "price": 6820000,
+    "stock": 22,
+    "category": "Electronic"
+  },
+  {
+    "name": "Bose Handsfree",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/service/id/images/accessory-category/price/10700/10700280/MX_Promo_Awal_JuLi_Headset_BOSE_electronic_Music_Earphone_Handsfree_Universal_TERLARIS_1.jpg",
+    "price": 173000,
+    "stock": 98,
+    "category": "Electronic"
+  },
+  {
+    "name": "a6s headset Bluetooth",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/service/id/images/accessory-category/price/7355/7355359/MX_a6s_airdots_headset_bluetooth_5_0_sport_true_wireless_earphone_l_r_1.jpg",
+    "price": 99000,
+    "stock": 176,
+    "category": "Electronic"
+  },
+  {
+    "name": "Wacom CINTIQ DTK-1300",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/global/images/product/tablets/Wacom_Cintiq_13HD_DTK_1300/Wacom_Cintiq_13HD_DTK_1300_S_1.jpg",
+    "price": 11900000,
+    "stock": 20,
+    "category": "Electronic"
+  },
+  {
+    "name": "Wacom CINTIQ DTK-2200",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/global/images/product/tablets/Wacom_22HD_DTK_2200/Wacom_22HD_DTK_2200_S_1.jpg",
+    "price": 32900000,
+    "stock": 13,
+    "category": "Electronic"
+  },
+  {
+    "name": "DJI Spark Drone",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/global/images/product/digitalvideocameras/DJI_Spark/DJI_Spark_S_1.jpg",
+    "price": 6100000,
+    "stock": 27,
+    "category": "Electronic"
+  },
+  {
+    "name": "Xiaomi Mi Drone",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/global/images/product/digitalvideocameras/Xiaomi_Drone_4K/Xiaomi_Drone_4K_S_1.jpg",
+    "price": 10145000,
+    "stock": 8,
+    "category": "Electronic"
+  },
+  {
+    "name": "JJRC H36 Drone",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/global/images/product/digitalvideocameras/JJRC_H36/JJRC_H36_S_1.jpg",
+    "price": 234000,
+    "stock": 32,
+    "category": "Electronic"
+  },
+  {
+    "name": "Lenovo IdeaPad S145 14",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/global/images/product/laptops/Lenovo_IdeaPad_S145_14/Lenovo_IdeaPad_S145_14_S_1.jpg",
+    "price": 3670000,
+    "stock": 91,
+    "category": "Electronic"
+  },
+  {
+    "name": "Asus VivoBook Ultra A412",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/global/images/product/laptops/ASUS_VivoBook_Ultra_A412/ASUS_VivoBook_Ultra_A412_S_1.jpg",
+    "price": 7120000,
+    "stock": 37,
+    "category": "Electronic"
+  },
+  {
+    "name": "Lenovo IdeaPad 330 14",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/global/images/product/laptops/Lenovo_Ideapad_330_14a/Lenovo_Ideapad_330_14a_S_1.jpg",
+    "price": 3350000,
+    "stock": 23,
+    "category": "Electronic"
+  },
+  {
+    "name": "Lenovo IdeaPad C340 14",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/global/images/product/laptops/Lenovo_Ideapad_C340_14/Lenovo_Ideapad_C340_14_S_1.jpg",
+    "price": 8810000,
+    "stock": 11,
+    "category": "Electronic"
+  },
+  {
+    "name": "Asus VivoBook Max X441MA",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/global/images/product/laptops/ASUS_VivoBook_Max_X441MA/ASUS_VivoBook_Max_X441MA_S_1.jpg",
+    "price": 3400000,
+    "stock": 27,
+    "category": "Electronic"
+  },
+  {
+    "name": "Asus ROG Strix G531GT",
+    "image_url": "https://d2pa5gi5n2e1an.cloudfront.net/webp/global/images/product/laptops/ASUS_ROG_Strix_G531GT/ASUS_ROG_Strix_G531GT_S_1.jpg",
+    "price": 12800000,
+    "stock": 3,
+    "category": "Electronic"
+  }
+]
