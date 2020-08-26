@@ -5,6 +5,19 @@
 
 * **[E-Commerce-CMS_Server](https://ecommerce-server-ichlas.herokuapp.com/)**
 
+List of available endpoints:
+- `POST /login`
+
+And routes below need authentication
+- `POST /products`
+- `GET /products`
+- `GET /products/:id`
+- `PATCH /products/:id`
+- `DELETE /products/:id`
+- `POST /chart/add`
+- `GET /chart/show`
+- `DELETE /chart/delete`
+
 ## API Documentation
 
 ​
@@ -505,6 +518,357 @@ And routes below need authentication
         ```json
         { "message" : "Cant update/delete, because Product not found" }
         ```
+
+    OR
+
+    * **Code:** 401 UNAUTHORIZED <br />
+        **Content:** 
+        ```json
+        { "message" : "You dont have token" }
+        ```
+
+        OR 
+        
+    * **Code:** 401 UNAUTHORIZED <br />
+        **Content:** 
+        ```json
+        { "message" : "Your token is wrong" }
+        ```
+        OR 
+        
+    * **Code:** 401 UNAUTHORIZED <br />
+        **Content:** 
+        ```json
+        { "message" : "You dont have previllege" }
+        ```
+
+    OR
+
+    * **Code:** 500 INTERNAL SERVER ERROR <br />
+        **Content:** 
+        ```json
+        { "message" : "internal server error" }
+        ```
+**User Register**
+----
+  Register User e-commerse
+
+* **URL**
+
+  http://localhost:3000/users/register
+
+* **Method:**
+  
+  `POST`
+
+* **Request Headers**
+
+   none
+  
+* **URL Params**
+
+   none
+
+* **Data Params**
+
+  | key | value | required |
+  | :---: | :---: | :---: |
+  | email | STRING| true |
+  | password | STRING | true |
+
+* **Success Response:**
+  
+  
+  * **Code:** 200 OK <br />
+    **Content:** 
+    ```json
+    { "message": "Succes Register User ichlasul@gmail.com " }
+    ```
+ 
+* **Error Response:**
+
+    * **Code:** 400 BAD REQUEST <br />
+        **Content:** 
+        ```json
+        { "message": "User sudah terdaftar" }
+        ``` 
+
+    OR
+
+    * **Code:** 500 INTERNAL SERVER ERROR <br />
+        **Content:** 
+        ```json
+        { "message" : "internal server error" }
+        ```
+
+
+----
+**User Add To Cart**
+----
+  Add To Cart
+
+* **URL**
+
+  http://localhost:3000/chart/add
+
+* **Method:**
+  
+  `POST`
+
+* **Request Headers**
+
+   YES
+  
+* **URL Params**
+
+   | key | value | required |
+  | :---: | :---: | :---: |
+  | token | STRING | true |
+
+* **Data Params**
+
+   | key | value | required |
+  | :---: | :---: | :---: |
+  | quantity | INTEGER| true |
+  | ProductId | INTEGER| true |
+
+* **Success Response:**
+  
+  
+  * **Code:** 200 OK <br />
+    **Content:** 
+    ```json
+    {
+      "message": "Berhasil ditambahkan"
+    }
+    ```
+
+  * **Code:** 201 CREATE <br />
+    **Content:** 
+    ```json
+    {
+      "quantity": 1,
+      "ProductId": 3,
+      "UserId": 13,
+      "updatedAt": "2020-07-30T15:10:25.523Z",
+      "createdAt": "2020-07-30T15:10:25.523Z"
+    }
+    ```
+ 
+* **Error Response:**
+
+    * **Code:** 400 BAD REQUEST <br />
+        **Content:** 
+        ```json
+        { "message": "Invalid email and password" }
+        ``` 
+
+    * **Code:** 401 UNAUTHORIZED <br />
+        **Content:** 
+        ```json
+        { "message" : "You dont have token" }
+        ```
+
+        OR 
+        
+    * **Code:** 401 UNAUTHORIZED <br />
+        **Content:** 
+        ```json
+        { "message" : "Your token is wrong" }
+        ```
+        OR 
+        
+    * **Code:** 401 UNAUTHORIZED <br />
+        **Content:** 
+        ```json
+        { "message" : "You dont have previllege" }
+        ```
+
+    OR
+
+    * **Code:** 500 INTERNAL SERVER ERROR <br />
+        **Content:** 
+        ```json
+        { "message" : "internal server error" }
+        ```
+
+----
+**User Get Cart**
+----
+  Get User Cart
+
+* **URL**
+
+  http://localhost:3000/chart/show
+
+* **Method:**
+  
+  `GET`
+
+* **Request Headers**
+
+   YES
+  
+* **URL Params**
+
+   | key | value | required |
+  | :---: | :---: | :---: |
+  | token | STRING | true |
+
+* **Data Params**
+
+  no
+
+* **Success Response:**
+  
+  
+  * **Code:** 200 OK <br />
+    **Content:** 
+    ```json
+    {
+      "charts": [
+          {
+              "quantity": 5,
+              "UserId": 13,
+              "ProductId": 5,
+              "createdAt": "2020-07-30T08:04:59.707Z",
+              "updatedAt": "2020-07-30T08:04:59.707Z",
+              "Product": {
+                  "id": 5,
+                  "name": "Toy harley TOURING BREAKOUT 114",
+                  "image_url": "https://testride.harley-davidson.asia/assets/img/bikes/MY18/AEM/SOFTAIL/Street-bob.png",
+                  "price": 10000000,
+                  "stock": 2,
+                  "createdAt": "2020-07-25T08:26:56.795Z",
+                  "updatedAt": "2020-07-25T08:26:56.795Z"
+              }
+          },
+          {
+              "quantity": 1,
+              "UserId": 13,
+              "ProductId": 3,
+              "createdAt": "2020-07-30T15:10:25.523Z",
+              "updatedAt": "2020-07-30T15:10:25.523Z",
+              "Product": {
+                  "id": 3,
+                  "name": "Toy harley STREET BOB",
+                  "image_url": "https://testride.harley-davidson.asia/assets/img/bikes/MY18/AEM/SOFTAIL/Street-bob.png",
+                  "price": 10000000,
+                  "stock": 2,
+                  "createdAt": "2020-07-25T08:26:56.795Z",
+                  "updatedAt": "2020-07-25T08:26:56.795Z"
+              }
+          },
+          {
+              "quantity": 13,
+              "UserId": 13,
+              "ProductId": 2,
+              "createdAt": "2020-07-30T07:42:03.746Z",
+              "updatedAt": "2020-07-30T15:13:07.617Z",
+              "Product": {
+                  "id": 2,
+                  "name": "Toy harley FAT BOB 114",
+                  "image_url": "https://testride.harley-davidson.asia/assets/img/bikes/MY20/FXFBS.png",
+                  "price": 10000000,
+                  "stock": 44,
+                  "createdAt": "2020-07-25T08:26:56.795Z",
+                  "updatedAt": "2020-07-27T01:28:39.743Z"
+              }
+          }
+      ]
+  }
+    ```
+
+ 
+* **Error Response:**
+
+    * **Code:** 400 BAD REQUEST <br />
+        **Content:** 
+        ```json
+        { "message": "Invalid email and password" }
+        ``` 
+
+    OR
+
+    * **Code:** 401 UNAUTHORIZED <br />
+        **Content:** 
+        ```json
+        { "message" : "You dont have token" }
+        ```
+
+        OR 
+        
+    * **Code:** 401 UNAUTHORIZED <br />
+        **Content:** 
+        ```json
+        { "message" : "Your token is wrong" }
+        ```
+        OR 
+        
+    * **Code:** 401 UNAUTHORIZED <br />
+        **Content:** 
+        ```json
+        { "message" : "You dont have previllege" }
+        ```
+
+    OR
+
+    * **Code:** 500 INTERNAL SERVER ERROR <br />
+        **Content:** 
+        ```json
+        { "message" : "internal server error" }
+        ```
+
+----
+**User Delete Cart**
+----
+  Delete product from Cart
+
+* **URL**
+
+  http://localhost:3000/chart/delete
+
+* **Method:**
+  
+  `DELETE`
+
+* **Request Headers**
+
+   YES
+  
+* **URL Params**
+
+   | key | value | required |
+  | :---: | :---: | :---: |
+  | token | STRING | true |
+
+* **Data Params**
+
+   | key | value | required |
+  | :---: | :---: | :---: |
+  | ProductId | INTEGER| true |
+
+* **Success Response:**
+  
+  
+  * **Code:** 200 OK <br />
+    **Content:** 
+    ```json
+    {
+      "message": "Success delete"
+    }
+    ```
+
+ 
+* **Error Response:**
+
+    * **Code:** 400 BAD REQUEST <br />
+        **Content:** 
+        ```json
+        {
+          "error": "Chart not found"
+        }
+        ``` 
 
     OR
 
