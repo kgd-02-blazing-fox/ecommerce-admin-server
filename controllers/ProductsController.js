@@ -105,7 +105,7 @@ class ProductController {
     } catch (err) {
       next({
         status: 400,
-        message: err.message
+        message: 'Database product stock update failed'
       })
     }
   }

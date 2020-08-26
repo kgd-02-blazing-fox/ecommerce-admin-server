@@ -41,7 +41,10 @@ class UserController {
         email: user.email,
       })
     } catch (err) {
-      next(err)
+      next({
+        status: 500,
+        message: "registration failed, check input"
+      })
     }
   }
 }

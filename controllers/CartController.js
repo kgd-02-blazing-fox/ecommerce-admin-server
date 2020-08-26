@@ -13,7 +13,10 @@ class CartController {
       })
       res.status(200).json(data)
     } catch (err) {
-      next(err)
+      next({
+        status: 500,
+        message: "fetch failed, internal server"
+      })
     }
   }
 
@@ -56,7 +59,6 @@ class CartController {
         })
       res.status(200).json(addedItem)
     } catch (err) {
-      console.log(err);
       next(err)
     }
   }
