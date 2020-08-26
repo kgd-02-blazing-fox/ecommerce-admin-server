@@ -88,6 +88,12 @@ describe("Admin - putProducts",()=>{
         .end((err,res)=>{
             expect(res.status).toBe(200)
             expect(res.body).toBeInstanceOf(Array)
+            expect(res.body[1][0]).toBeInstanceOf(Object)
+            expect(res.body[1][0]).toHaveProperty('name', 'UltraSoy')
+            expect(res.body[1][0]).toHaveProperty('image_url', 'ultrasoy.png')
+            expect(res.body[1][0]).toHaveProperty('price', 5000)
+            expect(res.body[1][0]).toHaveProperty('stock', 120)
+            expect(res.body[1][0]).toHaveProperty('category', 'food')
             done()
         })
     })
