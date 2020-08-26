@@ -1,0 +1,62 @@
+[
+  {
+    "name": "novel cerita",
+    "image_url": "https://www.berdikaribook.red/image/c/data/Basa-Basi/KAUMNOVELSETYANINGSIHweb-500x500.jpg",
+    "price": 35000,
+    "stock": 60
+  },
+  {
+    "name": "novel thriller",
+    "image_url": "https://res.cloudinary.com/berdikari-book/image/upload/c/data/Solusi-Buku-Grup/noveltirah-500x500.jpg",
+    "price": 35000,
+    "stock": 55
+  },
+  {
+    "name": "novel romansa",
+    "image_url": "https://res.cloudinary.com/berdikari-book/image/upload/c/data/Haru/absurdnovel-500x500.jpg",
+    "price": 50000,
+    "stock": 50
+  },
+  {
+    "name": "laptop gaming",
+    "image_url": "https://media.dinomarket.com/docs/imgTD/2019-07/ROGG531GVI7R6G1T__080719160715_ll.jpg.jpg",
+    "price": 15000000,
+    "stock": 25
+  },
+  {
+    "name": "laptop performa",
+    "image_url": "https://cf.shopee.co.id/file/c863a4fa07bb67257265902ba6c61b40",
+    "price": 12000000,
+    "stock": 25
+  },
+  {
+    "name": "desktop pc",
+    "image_url": "https://images-na.ssl-images-amazon.com/images/I/51n3tUIpoSL.jpg",
+    "price": 10000000,
+    "stock": 25
+  },
+  {
+    "name": "mobil sederhana",
+    "image_url": "https://www.bsgwraps.com/wp-content/uploads/2015/07/Front-Full-BSG-Maz-500x500.jpg",
+    "price": 950000000,
+    "stock": 5
+  },
+  {
+    "name": "audio",
+    "image_url": "https://www.grosircirebon.com/wp-content/uploads/2019/03/Headphone-Wireless-Bluetooth-JBL-TM010S-500x500.png",
+    "price": 800000,
+    "stock": 25
+  },
+  {
+    "name": "momogi",
+    "image_url": "https://2.bp.blogspot.com/-JStr689Bn60/WqnrvH_xhoI/AAAAAAAAAC8/b_N-gulFPHMzC2YyGCT0gyL7ZKRilDSCACLcBGAs/s1600/IMG_0137.JPG",
+    "price": 20000,
+    "stock": 95
+  },
+  {
+    "name": "kopi",
+    "image_url": "https://sc01.alicdn.com/kf/UTB8b4NIfpfJXKJkSamHq6zLyVXaJ.jpg",
+    "price": 17000,
+    "stock": 999
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "email": "budi@mail.com",
+    "password": "1234",
+    "role": "user"
+  },
+  {
+    "email": "andi@mail.com",
+    "password": "1234",
+    "role": "user"
+  },
+  {
+    "email": "rudi@mail.com",
+    "password": "1234",
+    "role": "user"
+  },
+  {
+    "email": "jokowi@mail.com",
+    "password": "1234",
+    "role": "user"
+  }
+]

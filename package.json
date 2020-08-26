@@ -1,0 +1,36 @@
+{
+  "name": "ecommerce-admin-server",
+  "version": "1.0.0",
+  "description": "repository server admin ecommerce",
+  "main": "index.js",
+  "scripts": {
+    "start": "node bin/http.js",
+    "dev": "NODE_ENV=development nodemon bin/http.js",
+    "test": "NODE_ENV=test sequelize db:seed:all && npx jest --verbose --runInBand --detectOpenHandles --forceExit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arissatya/ecommerce-admin-server.git"
+  },
+  "keywords": [],
+  "author": "arissatya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arissatya/ecommerce-admin-server/issues"
+  },
+  "homepage": "https://github.com/arissatya/ecommerce-admin-server#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.3.0",
+    "sequelize": "^6.3.4",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "jest": "^26.4.0",
+    "supertest": "^4.0.2"
+  }
+}
