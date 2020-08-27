@@ -116,6 +116,7 @@ describe('TEST PRODUCT', function () {
       expect(updatedProduct.statusCode).toBe(200);
       expect(updatedProduct.body).toEqual({ message: "Update Success" })
     });
+
     test('Dapat menampilkan eror ketika databaru is Empty ', async function () {
       const updatedProduct = await request(app)
         .patch(`/products/${productId}`)
@@ -160,16 +161,13 @@ describe('TEST PRODUCT', function () {
       expect(removedProduct.body).toEqual({ message: "Deleted" });
       expect(removedProduct.statusCode).toBe(200);
     });
+    
   })
-  describe('Delete Product empty', function () {
-    test('Dapat menampilkan pesan error ketika menghapus product yang tidak ada', async function () {
-      const removedProduct = await request(app)
-        .delete(`/products/${productId}`)
-        .set({ 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTU5NTcwMzA0M30.iGK4VmFugbsOkcS6_iQmTLeEjaYjvDanACdQHH1nGnA' })
-      expect(removedProduct.body).toEqual({ message: "Cant update/delete, because Product not found" });
-      expect(removedProduct.statusCode).toBe(404);
-    });
-  })
-
-
+  test('Dapat menampilkan pesan error ketika menghapus product yang tidak ada', async function () {
+    const removedProduct = await request(app)
+      .delete(`/products/${productId}`)
+      .set({ 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTU5NTcwMzA0M30.iGK4VmFugbsOkcS6_iQmTLeEjaYjvDanACdQHH1nGnA' })
+    expect(removedProduct.body).toEqual({ message: "Cant update/delete, because Product not found" });
+    expect(removedProduct.statusCode).toBe(404);
+  });
 })

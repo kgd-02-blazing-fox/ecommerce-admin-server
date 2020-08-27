@@ -4,7 +4,7 @@ const { signToken } = require('../helpers/jwt')
 
 class ControllerUser {
   static async postUsersLogin(req, res, next) {
-    console.log('======Hai>' + req.body.email, req.body.password)
+    // console.log('======Hai>' + req.body.email, req.body.password)
     const inputPassword = req.body.password
     try {
       const user = await User.findOne({
@@ -27,7 +27,7 @@ class ControllerUser {
         })
       }
     } catch (err) {
-      console.log(err.name)
+      console.log(err.errors)
       next(err)
     }
   }
@@ -49,14 +49,16 @@ class ControllerUser {
           password
         })
 
-        res.status(201).json({
-          message: `Succes Register User ${registerUser.email} `
-        })
+        if (registerUser) {
+          res.status(201).json({
+            message: `Succes Register User ${registerUser.email} `
+          })
+        }
       }
 
     } catch (err) {
       console.log(err)
-      res.status(500).json(err)
+      next(err)
     }
   }
 }

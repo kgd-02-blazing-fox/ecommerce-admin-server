@@ -1,6 +1,7 @@
 const errorHandler = (err, req, res, next) => {
   switch (err.name) {
     case 'SequelizeValidationError':
+      console.log('Hai Iklas')
       const errors = err.errors.map(error => ({
         message: error.message
       }));
@@ -29,6 +30,11 @@ const errorHandler = (err, req, res, next) => {
     case 'Invalid email and password':
       res.status(400).json({
         message: 'Invalid email and password'
+      })
+      break;
+    case 'User Sudah terdaftar':
+      res.status(400).json({
+        message: 'User Sudah terdaftar'
       })
       break;
     case 'Kuantity gaboleh kurang dari 1':
