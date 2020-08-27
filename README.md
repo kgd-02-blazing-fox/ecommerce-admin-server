@@ -5,8 +5,11 @@
 
 * **[E-Commerce-CMS_Server](https://ecommerce-server-ichlas.herokuapp.com/)**
 
+* **[E-Commerce-Customer](https://e-commerce-iklas.web.app/)**
+
 List of available endpoints:
 - `POST /login`
+- `POST /register`
 
 And routes below need authentication
 - `POST /products`
@@ -15,6 +18,7 @@ And routes below need authentication
 - `PATCH /products/:id`
 - `DELETE /products/:id`
 - `POST /chart/add`
+- `PATCH /chart/min`
 - `GET /chart/show`
 - `DELETE /chart/delete`
 
