@@ -31,6 +31,11 @@ const errorHandler = (err, req, res, next) => {
         message: 'Invalid email and password'
       })
       break;
+    case 'Kuantity gaboleh kurang dari 1':
+      res.status(404).json({
+        message: 'Kuantity gaboleh kurang dari 1'
+      })
+      break;
     case 'Not Found':
       res.status(404).json({
         message: 'Cant update/delete, because Product not found'

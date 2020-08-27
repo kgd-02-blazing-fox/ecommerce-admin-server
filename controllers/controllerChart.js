@@ -74,13 +74,15 @@ class ControllerChart {
         where: {
           UserId
         },
-        include: Product
+        include: [{ model: Product }],
+        order: [[Product, 'name', 'ASC']] 
       })
       res.status(200).json({
         charts
       })
     } catch (err) {
       console.log(err)
+      next(err)
     }
   }
   static async deleteChart(req, res, next) {
@@ -102,6 +104,44 @@ class ControllerChart {
     } catch (err) {
       next(err)
       console.log(err)
+    }
+  }
+  static async minStock(req, res, next) {
+    try {
+      const newCart = {
+        ProductId: Number(req.body.ProductId),
+        UserId: req.userLogin.id
+      }
+
+      const exist = await Chart.findOne({
+        where: {
+          ProductId: newCart.ProductId,
+          UserId: newCart.UserId
+        },
+        include: Product
+      })
+      // console.log('---->Checkpoint1')
+      // console.log(exist)
+
+      if (exist) {
+        if (exist.quantity > 1) {
+          const newQuantity = exist.quantity - 1
+          const cart = await Chart.update({ quantity: newQuantity }, {
+            where: {
+              ProductId: newCart.ProductId
+            }
+          })
+          res.status(200).json({
+            message: 'Berhasil dikurangi'
+          })
+        } else {
+          throw { name: 'Kuantity gaboleh kurang dari 1' }
+        }
+      } else {
+        throw { name: 'Not Found' }
+      }
+    } catch (err) {
+      next(err)
     }
   }
 }

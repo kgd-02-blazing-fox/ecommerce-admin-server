@@ -693,6 +693,92 @@ And routes below need authentication
         ```
 
 ----
+**User Min Product Quantity**
+----
+  User min product quantity
+
+* **URL**
+
+  http://localhost:3000/chart/min
+
+* **Method:**
+  
+  `POST`
+
+* **Request Headers**
+
+   YES
+  
+* **URL Params**
+
+   | key | value | required |
+  | :---: | :---: | :---: |
+  | token | STRING | true |
+
+* **Data Params**
+
+   | key | value | required |
+  | :---: | :---: | :---: |
+  | ProductId | INTEGER| true |
+
+* **Success Response:**
+  
+  
+  * **Code:** 200 OK <br />
+    **Content:** 
+    ```json
+    {
+      "message": "Berhasil dikurangi"
+    }
+    ```
+ 
+* **Error Response:**
+    * **Code:** 400 BAD REQUEST <br />
+        **Content:** 
+        ```json
+        { "message": "Kuantity gaboleh kurang dari 1" }
+        ``` 
+    * **Code:** 400 BAD REQUEST <br />
+        **Content:** 
+        ```json
+        { "message": "Cant update/delete, because Product not found" }
+        ``` 
+    * **Code:** 400 BAD REQUEST <br />
+        **Content:** 
+        ```json
+        { "message": "Invalid email and password" }
+        ``` 
+
+    * **Code:** 401 UNAUTHORIZED <br />
+        **Content:** 
+        ```json
+        { "message" : "You dont have token" }
+        ```
+
+        OR 
+        
+    * **Code:** 401 UNAUTHORIZED <br />
+        **Content:** 
+        ```json
+        { "message" : "Your token is wrong" }
+        ```
+        OR 
+        
+    * **Code:** 401 UNAUTHORIZED <br />
+        **Content:** 
+        ```json
+        { "message" : "You dont have previllege" }
+        ```
+
+    OR
+
+    * **Code:** 500 INTERNAL SERVER ERROR <br />
+        **Content:** 
+        ```json
+        { "message" : "internal server error" }
+        ```
+
+----
 **User Get Cart**
 ----
   Get User Cart
