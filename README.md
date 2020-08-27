@@ -9,9 +9,14 @@ repository server admin ecommerce
 
 * env template :    PORT=
                     SECRET=
+                    EMAIL_SEND=
+                    PASSWORD_SEND=
 
-* Client-Side Deploy Link:
-    https://e-commerce-cms-idz.herokuapp.com/
+* Client-Side-Customer Deploy Link:
+    https://e-commerce-cms-customer.web.app/
+
+* Client-Side-Admin Deploy Link:
+    https://e-commerce-cms-admin-client.web.app/
 
 * Server-Side Deploy Link /
     API Endpoint Base URL:
