@@ -1492,3 +1492,33 @@ repository server admin ecommerce
         ```
 
 <br><br>
+
+# DIGI-ONE
+
+Hello! Welcome to Digi-One!<br>
+
+|NO  | URL                               | Method        | Purpose                       |
+|----| -------------                     |:-------------:|:-----------------------------:|
+|1   | /user/register                    | POST          | Register a user               |
+|2   | /user/login                       | POST          | Login a user                  |
+|3   | /user/order                       | GET           | Get All order from customer   |
+|4   | /user/order                       | PATCH         | Update order status           |
+|5   | /product                          | GET           | Get all products              |
+|6   | /product                          | POST          | Create a product              |
+|7   | /product/:id                      | GET           | Find product based on id      |
+|8   | /product/:id                      | PUT           | Edit a product detail         |
+|9   | /product/:id                      | PATCH         | Update a product stock        |
+|10  | /product/:id                      | DELETE        | delete a product              |
+|11  | /customer/                        | GET           | Get customer detail           |
+|12  | /customer/                        | PUT           | Update customer detail        |
+|13  | /customer/register                | POST          | Register customer account     |
+|14  | /customer/login                   | POST          | Login for customer            |
+|15  | /customer/cart                    | GET           | Get all customer cart         |
+|16  | /customer/cart                    | POST          | Create cart for customer      |
+|17  | /customer/:CartId                 | GET           | Get customer cart by id       |
+|18  | /customer/:CartId                 | POST          | Add product to cart           |
+|19  | /customer/:CartId                 | PUT           | Update Order from cart        |
+|20  | /customer/:CartId                 | PATCH         | Update order status           |
+|21  | /customer/:CartId/:CartProductId  | DELETE        | Delete order                  |
+
+<br><br>
