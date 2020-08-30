@@ -2,28 +2,6 @@
 repository server admin ecommerce
 
 -----
-## Data
------
-* email: citranur@contoh.com
-* password: 123456
-
-* env template :    PORT=
-                    SECRET=
-                    EMAIL_SEND=
-                    PASSWORD_SEND=
-
-* Client-Side-Customer Deploy Link:
-    https://e-commerce-cms-customer.web.app/
-
-* Client-Side-Admin Deploy Link:
-    https://e-commerce-cms-admin-client.web.app/
-
-* Server-Side Deploy Link /
-    API Endpoint Base URL:
-    https://e-commerce-cms-admin-client.web.app/
-
-
------
 ## 1. /user/register
 -----
 * method: POST
