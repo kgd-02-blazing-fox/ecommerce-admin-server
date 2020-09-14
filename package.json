@@ -1,0 +1,35 @@
+{
+  "name": "ecommerce-admin-server",
+  "version": "1.0.0",
+  "description": "**All Url :** * **[Documentation With Postman](https://documenter.getpostman.com/view/11947207/T1DqfwF4?version=latest)**",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=production node bin/http",
+    "dev": "NODE_ENV=development nodemon bin/http",
+    "test": "NODE_ENV=test npx jest --verbose --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ichlasulamalgit/ecommerce-admin-server.git"
+  },
+  "keywords": [],
+  "author": "Ichlasul Amal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ichlasulamalgit/ecommerce-admin-server/issues"
+  },
+  "homepage": "https://github.com/ichlasulamalgit/ecommerce-admin-server#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.3.0",
+    "sequelize": "^6.3.4"
+  },
+  "devDependencies": {
+    "jest": "^26.4.0",
+    "supertest": "^4.0.2"
+  }
+}
